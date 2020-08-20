@@ -1,13 +1,40 @@
 let health = 100
 
+let opponentElem = document.getElementById('opponent')
 let healthElem = document.getElementById('health')
 let slapBtn = document.getElementById("slap")
 let punchBtn = document.getElementById("punch")
 let kickBtn = document.getElementById("kick")
 
 
-function drawBoard() {
+let challengers = [{
 
+    name: "green-lantern",
+    img: "green-lantern.jpg",
+    armor: 1,
+}
+{
+
+    name: "batman",
+    img: "batmanderp.jpg",
+    armor: 3,
+}
+
+{
+    name: "hulk",
+    img: "hulk.jpg",
+    armor: 4,
+
+}
+{
+    name: "one-punch",
+    img: "onepunch.jpg",
+    armor: 5,
+}
+]
+
+function drawBoard() {
+    let opponentElem.innerHTML = `<h1> hello </h1>`
 }
 
 function drawHealth() {
@@ -28,5 +55,7 @@ function attack(hit) {
         console.log(health)
     }
     drawHealth()
+
 }
 
+drawBoard();
