@@ -46,8 +46,8 @@ let challengers = [{
     img: "onepunch.jpg",
     health: 100,
     attacks: {
-        slap: 3,
-        punch: 4,
+        slap: 1,
+        punch: 2,
         kick: 5
     }
 }
@@ -62,7 +62,11 @@ function drawOpponent() {
 
 function drawHealth() {
     healthElem.innerHTML = `${challengers[0].health}`
-    //eventually check if array is empty and render 'game over'
+    if (challengers.length == 1 && challengers[0].health < 10) {
+        if (!alert("HAHAHAHA YOU CAN'T BEAT ONEPUNCH FOOL")) {
+            window.location.reload()
+        }
+    }
 }
 
 
