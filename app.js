@@ -1,6 +1,7 @@
 let health = 100
 
 let opponentElem = document.getElementById('opponent')
+let challengerNameElem = document.getElementById('challengerName')
 let healthElem = document.getElementById('health')
 let slapBtn = document.getElementById("slap")
 let punchBtn = document.getElementById("punch")
@@ -9,54 +10,71 @@ let kickBtn = document.getElementById("kick")
 
 let challengers = [{
 
-    name: "green-lantern",
+    name: "Green Lantern",
     img: "green-lantern.jpg",
-    armor: 1,
-}
+    health: 100,
+    attacks: {
+        slap: 5,
+        punch: 10,
+        kick: 15
+    }
+},
 {
 
-    name: "batman",
+    name: "Bat Derp",
     img: "batmanderp.jpg",
-    armor: 3,
-}
+    health: 100,
+    attacks: {
+        slap: 5,
+        punch: 10,
+        kick: 15
+    }
+},
 
 {
-    name: "hulk",
+    name: "Hulk",
     img: "hulk.jpg",
-    armor: 4,
-
-}
+    health: 100,
+    attacks: {
+        slap: 5,
+        punch: 10,
+        kick: 15
+    }
+},
 {
-    name: "one-punch",
+    name: "One Punch",
     img: "onepunch.jpg",
-    armor: 5,
+    health: 100,
+    attacks: {
+        slap: 3,
+        punch: 4,
+        kick: 5
+    }
 }
 ]
 
-function drawBoard() {
-    debugger
-    let opponentElem.innerHTML = `<h1> hello </h1>`
+function drawOpponent() {
+    opponentElem.innerHTML = `<img src="${challengers[0].img}"></img>`
+    challengerNameElem.innerHTML = `<h1 class="text-light">${challengers[0].name}</h1>`
+
 }
+
 
 function drawHealth() {
-    healthElem.innerHTML = health
+    healthElem.innerHTML = `${challengers[0].health}`
+//eventually check if array is empty and render 'game over'
 }
+
 
 function attack(hit) {
-    if (hit == "slap") {
-        health--;
-        console.log(health)
-    }
-    else if (hit == "punch") {
-        health -= 5;
-        console.log(health)
-    }
-    else if (hit == "kick") {
-        health -= 10;
-        console.log(health)
+    challengers[0].health -= challengers[0].attacks[hit]
+    if(challengers[0].health <= 0) {
+        challengers.shift();
+        drawOpponent()
     }
     drawHealth()
+    
 
 }
 
-drawBoard();
+drawOpponent();
