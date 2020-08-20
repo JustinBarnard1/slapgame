@@ -2,10 +2,10 @@ let health = 100
 
 let opponentElem = document.getElementById('opponent')
 let challengerNameElem = document.getElementById('challengerName')
-let healthElem = document.getElementById('health')
 let slapBtn = document.getElementById("slap")
 let punchBtn = document.getElementById("punch")
 let kickBtn = document.getElementById("kick")
+
 
 
 let challengers = [{
@@ -57,10 +57,12 @@ function drawOpponent() {
     opponentElem.innerHTML = `<img id="currentOpponent" class="" src="${challengers[0].img}"></img>`
     challengerNameElem.innerHTML = `<h1 class="text-light">${challengers[0].name}</h1>`
 
+
 }
 
 
 function drawHealth() {
+    let healthElem = document.getElementById('health')
     healthElem.innerHTML = `${challengers[0].health}`
     if (challengers.length == 1 && challengers[0].health < 10) {
         if (!alert("HAHAHAHA YOU CAN'T BEAT ONEPUNCH FOOL")) {
@@ -89,6 +91,12 @@ function attack(hit) {
 
 function getStarted() {
     document.getElementById("welcome").remove();
+    let theseButtons = document.getElementById('buttons')
+    theseButtons.innerHTML = `<div id="slap" class="btn btn-primary" onclick="attack('slap')">Slap</div>
+        <div id="punch" class="btn btn-primary" onclick="attack('punch')">Punch</div>
+        <div id="kick" class="btn btn-primary" onclick="attack('kick')">Kick</div>`
+    let initHealth = document.getElementById('healthID')
+    initHealth.innerHTML = ` <h4 class="text-light">Health: <span id="health">100</span></h4>`
     drawOpponent();
 }
 

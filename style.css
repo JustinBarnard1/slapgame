@@ -20,3 +20,8 @@ height: 8vh;
 .imgShadow{
     box-shadow: 0 0 10px 15px red;
 }
+
+.menuBg{
+    background-image: url(./startmenubg.jpg);
+    height: 50vh;
+}

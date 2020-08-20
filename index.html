@@ -12,21 +12,21 @@
 
 <body>
     <header class="text-center bg-secondary p-5">
-        <h3>Hero Beatdown</h3>
+        <h1 class="">Hero Beatdown</h1>
     </header>
 
 
     <main class="background">
         <div id="welcome" class="row justify-content-center">
-            <div class="col-6 card p-2 text-center w-50 justify-content-center mt-5 bg-secondary">
-                <img class="mx-auto" src="//placehold.it/300x300" alt="Default Image">
+            <div class="col-6 card p-2 text-center w-50 justify-content-center mt-5 menuBg">
+
                 <div class="mt-2">
-                    <b class="text-center">Welcome!</b>
-                    <p>Get Ready to Assault Some Heros </p>
+                    <b class="text-center text-light">Welcome!</b>
+                    <p class="text-light">Get Ready to Assault Some Heros </p>
                     <br>
                     <form class="justify-content-center">
                         <div class="">
-                            <button class="btn btn-primary mt-3" onclick="getStarted()">Start Game</button>
+                            <button class="btn btn-secondary mt-3" onclick="getStarted()">Start Game</button>
                         </div>
                     </form>
 
@@ -41,17 +41,14 @@
         <div class="row container-fluid text-center justify-content-center">
             <div class="col-6">
                 <div id="opponent"><img src=""></div>
-                <div>
-                    <h4 class="text-light">Health: <span id="health">100</span></h4>
-                    <!-- progress bar -->
+                <div id="healthID">
+
                 </div>
             </div>
         </div>
         <div class="row container-fluid text-center justify-content-center">
-            <div class="col-6">
-                <div id="slap" class="btn btn-primary" onclick="attack('slap')">Slap</div>
-                <div id="punch" class="btn btn-primary" onclick="attack('punch')">Punch</div>
-                <div id="kick" class="btn btn-primary" onclick="attack('kick')">Kick</div>
+            <div id="buttons" class="col-6">
+
             </div>
         </div>
 
