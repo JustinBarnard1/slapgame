@@ -11,7 +11,7 @@ function drawBoard() {
 }
 
 function drawHealth() {
-
+    healthElem.innerHTML = health
 }
 
 function attack(hit) {
