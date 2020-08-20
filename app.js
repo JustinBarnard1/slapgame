@@ -54,7 +54,7 @@ let challengers = [{
 ]
 
 function drawOpponent() {
-    opponentElem.innerHTML = `<img src="${challengers[0].img}"></img>`
+    opponentElem.innerHTML = `<img id="currentOpponent" class="" src="${challengers[0].img}"></img>`
     challengerNameElem.innerHTML = `<h1 class="text-light">${challengers[0].name}</h1>`
 
 }
@@ -62,19 +62,29 @@ function drawOpponent() {
 
 function drawHealth() {
     healthElem.innerHTML = `${challengers[0].health}`
-//eventually check if array is empty and render 'game over'
+    //eventually check if array is empty and render 'game over'
 }
 
 
 function attack(hit) {
     challengers[0].health -= challengers[0].attacks[hit]
-    if(challengers[0].health <= 0) {
+    let colorChange = document.getElementById("currentOpponent")
+    colorChange.classList.add('imgShadow')
+    setTimeout(() => {
+        let colorChange = document.getElementById("currentOpponent")
+        colorChange.classList.remove('imgShadow')
+    }, 300)
+    if (challengers[0].health <= 0) {
         challengers.shift();
         drawOpponent()
     }
     drawHealth()
-    
+
 
 }
 
-drawOpponent();
+function getStarted() {
+    document.getElementById("welcome").remove();
+    drawOpponent();
+}
+

@@ -16,16 +16,31 @@
     </header>
 
 
-    <main class="background" >
-        
+    <main class="background">
+        <div id="welcome" class="row justify-content-center">
+            <div class="col-6 card p-2 text-center w-50 justify-content-center mt-5">
+                <img class="mx-auto" src="//placehold.it/300x300" alt="Default Image">
+                <div class="mt-2">
+                    <b class="text-center">Welcome!</b>
+                    <p>Time to play this slap game.</p>
+                    <br>
+                    <form class="justify-content-center">
+                        <div class="">
+                            <button class="btn btn-primary mt-3" onclick="getStarted()">Start Game</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
         <div class="row container-fluid text-center justify-content-center background.jfif">
-            <div id="challengerName"class="col-6">
+            <div id="challengerName" class="col-6">
                 <h1></h1>
             </div>
         </div>
         <div class="row container-fluid text-center justify-content-center">
             <div class="col-6">
-                <div id="opponent"><img src="//placehold.it/400x600"></div>
+                <div id="opponent"><img src=""></div>
                 <div>
                     <h4 class="text-light">Health: <span id="health">100</span></h4>
                     <!-- progress bar -->
