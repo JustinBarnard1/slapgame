@@ -23,5 +23,10 @@ height: 8vh;
 
 .menuBg{
     background-image: url(./startmenubg.jpg);
-    height: 50vh;
+    height: 60vh;
+}
+
+/* added a max height to img tag */
+img{
+    max-height: 50vh;
 }
