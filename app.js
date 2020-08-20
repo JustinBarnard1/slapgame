@@ -34,6 +34,7 @@ let challengers = [{
 ]
 
 function drawBoard() {
+    debugger
     let opponentElem.innerHTML = `<h1> hello </h1>`
 }
 
