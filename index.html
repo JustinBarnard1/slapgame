@@ -26,15 +26,16 @@
             <div class="col-6">
                 <img src="//placehold.it/300x300" alt="">
                 <div>
+                    <h4 id="health">Health: 0</h4>
                     <!-- progress bar -->
                 </div>
             </div>
         </div>
         <div class="row container-fluid text-center justify-content-center">
             <div class="col-6">
-                <div class="btn btn-primary">Slap</div>
-                <div class="btn btn-primary">Punch</div>
-                <div class="btn btn-primary">Kick</div>
+                <div id="slap" class="btn btn-primary" onclick="attack('slap')">Slap</div>
+                <div id="punch" class="btn btn-primary" onclick="attack('punch')">Punch</div>
+                <div id="kick" class="btn btn-primary" onclick="attack('kick')">Kick</div>
             </div>
         </div>
 
